@@ -1,0 +1,40 @@
+/*
+Copyright © 2026 NAME HERE <EMAIL ADDRESS>
+
+*/
+package cmd
+
+import (
+	"os"
+
+	"github.com/spf13/cobra"
+)
+
+
+
+// rootCmd represents the base command when called without any subcommands
+var rootCmd = &cobra.Command{
+	Use:   "goku",
+	Short: "Currently use to convert json to yaml and viceversa",
+	Long: ``,
+}
+
+func Execute() {
+	err := rootCmd.Execute()
+	if err != nil {
+		os.Exit(1)
+	}
+}
+
+func addSubcommandPallets() {
+	rootCmd.AddCommand(converterCmd)
+}
+
+func init() {
+	
+	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+
+	addSubcommandPallets()
+}
+
+
