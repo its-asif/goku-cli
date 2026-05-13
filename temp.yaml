@@ -1,0 +1,22 @@
+admin:
+    email: asif@example.com
+    name: Asif
+app:
+    debug: true
+    name: GokuCLI
+    version: 1.0.0
+database:
+    dbname: goku_db
+    driver: postgres
+    host: 127.0.0.1
+    password: secret123
+    port: 5432
+    username: admin
+features:
+    - json-conversion
+    - yaml-support
+    - logging
+server:
+    host: localhost
+    port: 8080
+    timeout: 30
